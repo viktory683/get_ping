@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "get-ping"
+version = "0.1.0"
+description = ""
+authors = ["bzglve <viktory683@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+fastapi = "^0.108.0"
+uvicorn = "^0.25.0"
+jc = "^1.24.0"
+
+[tool.poetry.scripts]
+start = "get_ping.main:start"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
