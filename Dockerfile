@@ -1,4 +1,4 @@
-FROM python:3.11-buster as builder
+FROM python:3.9-buster as builder
 
 RUN pip install poetry==1.4.2
 
@@ -14,7 +14,7 @@ RUN touch README.md
 
 RUN poetry install --without dev --no-root && rm -rf ${POETRY_CACHE_DIR}
 
-FROM python:3.11-slim-buster as runtime
+FROM python:3.9-slim-buster as runtime
 
 RUN apt update && apt install iputils-ping -y
 
