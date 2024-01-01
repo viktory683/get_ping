@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    get_ping:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/code
+            - /code/.venv
+        command: [ "python", "-m", "get_ping.main" ]
